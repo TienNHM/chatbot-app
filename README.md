@@ -2,6 +2,10 @@
 
 > Please dd OPENAI_API_KEY to [config.js](./src/config.js)
 
+> To run CI/CD pipeline, please update Workflow permissions in Github to allow access to secrets:
+> - Choose Read and write permissions for Actions
+> - Check Allow Github Actions to create and approve pull requests
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
