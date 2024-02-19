@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+> Please dd OPENAI_API_KEY to [config.js](./src/config.js)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
