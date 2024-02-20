@@ -6,7 +6,7 @@
 > - Choose Read and write permissions for Actions
 > - Check Allow Github Actions to create and approve pull requests
 
-> Configure the following secrets in Github (Settings -> Environment -> `github-pages` -> Environment secrets):
+> Configure the following secrets in Github (Settings -> Secrets and variables -> Repository secrets):
 > - REACT_APP_OPENAI_API_KEY = <your_openai_api_key>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
