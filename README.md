@@ -1,14 +1,5 @@
 # Getting Started with Create React App
 
-> Please dd OPENAI_API_KEY to [config.js](./src/config.js)
-
-> To run CI/CD pipeline, please update Workflow permissions in Github to allow access to secrets:
-> - Choose Read and write permissions for Actions
-> - Check Allow Github Actions to create and approve pull requests
-
-> Configure the following secrets in Github (Settings -> Secrets and variables -> Repository secrets):
-> - REACT_APP_OPENAI_API_KEY = <your_openai_api_key>
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
