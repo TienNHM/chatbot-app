@@ -22,8 +22,9 @@ jobs:
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        folder: build # The folder the action should deploy.
+      env:
         REACT_APP_OPENAI_API_KEY: ${{ secrets.REACT_APP_OPENAI_API_KEY }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_KEY }}
-        BRANCH: gh-pages
+      with:
+        folder: build # The folder the action should deploy.
+        branch: gh-pages
