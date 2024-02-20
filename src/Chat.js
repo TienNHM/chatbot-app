@@ -14,7 +14,7 @@ const Chat = () => {
     };
 
     const fetchMessage = async (input) => {
-        console.log('OpenAIAPIKey', OpenAIAPIKey);
+        // console.log('OpenAIAPIKey', OpenAIAPIKey);
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
             method: 'POST',
             headers: {
@@ -38,6 +38,7 @@ const Chat = () => {
             })
         });
         const data = await response.json();
+        console.log('data', data);
 
         return data.choices[0].message.content.trim();
     };
