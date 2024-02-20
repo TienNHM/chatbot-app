@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { OpenAIAPIKey } from './config'; // Create a file named 'config.js' with your OpenAI API key
+import { InputText } from 'primereact/inputtext';
 
 const Chat = () => {
     const [messages, setMessages] = useState([]);
@@ -13,7 +14,7 @@ const Chat = () => {
     };
 
     const fetchMessage = async (input) => {
-        console.log(OpenAIAPIKey)
+        console.log('OpenAIAPIKey', OpenAIAPIKey);
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
             method: 'POST',
             headers: {
@@ -37,12 +38,12 @@ const Chat = () => {
             })
         });
         const data = await response.json();
-        console.log(data);
+
         return data.choices[0].message.content.trim();
     };
 
     return (
-        <div>
+        <div className='d-flex justify-content-center flex-column my-3'>
             <div className="message-container">
                 {messages.map((message, index) => (
                     <div key={index} className={`message ${message.user}`}>
@@ -50,13 +51,11 @@ const Chat = () => {
                     </div>
                 ))}
             </div>
-            <input
-                type="text"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
+
+            <InputText value={input} 
+                onChange={(e) => setInput(e.target.value)} 
                 onKeyPress={(e) => e.key === 'Enter' && sendMessage()}
-                placeholder="Type a message..."
-            />
+                placeholder="Type a message here..." />
         </div>
     );
 };
